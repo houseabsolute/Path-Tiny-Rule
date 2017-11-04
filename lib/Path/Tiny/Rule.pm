@@ -41,7 +41,9 @@ __END__
 =head1 DESCRIPTION
 
 This module is a very thin wrapper around L<Path::Iterator::Rule> that always
-returns L<Path::Tiny> objects instead of strings.
+returns L<Path::Tiny> objects instead of strings. It should otherwise be a
+drop-in replacement for L<Path::Iterator::Rule>, and any deviation from that
+is a bug.
 
 This module has no public API that is not provided L<Path::Iterator::Rule>.
 
