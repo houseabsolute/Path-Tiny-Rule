@@ -2,7 +2,7 @@
 use strict;
 use warnings;
 
-
+use 5.006;
 
 use ExtUtils::MakeMaker;
 
@@ -14,30 +14,49 @@ my %WriteMakefileArgs = (
   },
   "DISTNAME" => "Path-Tiny-Rule",
   "LICENSE" => "artistic_2",
+  "MIN_PERL_VERSION" => "5.006",
   "NAME" => "Path::Tiny::Rule",
   "PREREQ_PM" => {
     "Path::Iterator::Rule" => 0,
+    "Path::Tiny" => 0,
+    "namespace::autoclean" => 0,
     "parent" => 0,
     "strict" => 0,
     "warnings" => 0
   },
   "TEST_REQUIRES" => {
+    "Exporter" => 0,
     "ExtUtils::MakeMaker" => 0,
     "File::Spec" => 0,
-    "Test::More" => "0.96"
+    "File::Temp" => 0,
+    "File::pushd" => 0,
+    "PIR" => 0,
+    "Test::Deep" => 0,
+    "Test::Filename" => "0.03",
+    "Test::More" => "0.96",
+    "lib" => 0
   },
   "VERSION" => "0.01",
   "test" => {
-    "TESTS" => "t/*.t"
+    "TESTS" => "t/*.t t/pir/*.t"
   }
 );
 
 
 my %FallbackPrereqs = (
+  "Exporter" => 0,
   "ExtUtils::MakeMaker" => 0,
   "File::Spec" => 0,
+  "File::Temp" => 0,
+  "File::pushd" => 0,
+  "PIR" => 0,
   "Path::Iterator::Rule" => 0,
+  "Path::Tiny" => 0,
+  "Test::Deep" => 0,
+  "Test::Filename" => "0.03",
   "Test::More" => "0.96",
+  "lib" => 0,
+  "namespace::autoclean" => 0,
   "parent" => 0,
   "strict" => 0,
   "warnings" => 0

@@ -6,6 +6,32 @@ Path::Tiny::Rule - Path::Iterator::Rule subclass that returns Path::Tiny objects
 
 version 0.01
 
+# SYNOPSIS
+
+    use Path::Tiny::Rule;
+
+    my $iter = Path::Tiny::Rule->new->name(qr/\.t$/)->in('t');
+
+    while ( my $test_file = $iter->() ) {
+        print $test_file->basename, "\n";
+    }
+
+# DESCRIPTION
+
+This module is a very thin wrapper around [Path::Iterator::Rule](https://metacpan.org/pod/Path::Iterator::Rule) that always
+returns [Path::Tiny](https://metacpan.org/pod/Path::Tiny) objects instead of strings. It should otherwise be a
+drop-in replacement for [Path::Iterator::Rule](https://metacpan.org/pod/Path::Iterator::Rule), and any deviation from that
+is a bug.
+
+This module has no public API that is not provided [Path::Iterator::Rule](https://metacpan.org/pod/Path::Iterator::Rule).
+
+It exists because I got really tired of writing this:
+
+    while ( my $path = $iter->() ) {
+        $path = path($path);
+        ...;
+    }
+
 # SUPPORT
 
 Bugs may be submitted at [https://github.com/houseabsolute/Path-Tiny-Rule/issues](https://github.com/houseabsolute/Path-Tiny-Rule/issues).

@@ -1,12 +1,22 @@
 requires "Path::Iterator::Rule" => "0";
+requires "Path::Tiny" => "0";
+requires "namespace::autoclean" => "0";
 requires "parent" => "0";
 requires "strict" => "0";
 requires "warnings" => "0";
 
 on 'test' => sub {
+  requires "Exporter" => "0";
   requires "ExtUtils::MakeMaker" => "0";
   requires "File::Spec" => "0";
+  requires "File::Temp" => "0";
+  requires "File::pushd" => "0";
+  requires "PIR" => "0";
+  requires "Test::Deep" => "0";
+  requires "Test::Filename" => "0.03";
   requires "Test::More" => "0.96";
+  requires "lib" => "0";
+  requires "perl" => "5.006";
 };
 
 on 'test' => sub {
