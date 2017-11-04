@@ -2,6 +2,7 @@ package Path::Tiny::Rule;
 
 use strict;
 use warnings;
+use namespace::autoclean;
 
 our $VERSION = '0.01';
 
