@@ -46,7 +46,7 @@ returns L<Path::Tiny> objects instead of strings. It should otherwise be a
 drop-in replacement for L<Path::Iterator::Rule>, and any deviation from that
 is a bug.
 
-This module has no public API that is not provided L<Path::Iterator::Rule>.
+This module has no public API that is not provided by L<Path::Iterator::Rule>.
 
 It exists because I got really tired of writing this:
 
