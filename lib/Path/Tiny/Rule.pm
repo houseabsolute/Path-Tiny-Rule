@@ -33,7 +33,7 @@ __END__
 
   use Path::Tiny::Rule;
 
-  my $iter = Path::Tiny::Rule->new->name(qr/\.t$/)->in('t');
+  my $iter = Path::Tiny::Rule->new->name(qr/\.t$/)->iter('t');
 
   while ( my $test_file = $iter->() ) {
       print $test_file->basename, "\n";
